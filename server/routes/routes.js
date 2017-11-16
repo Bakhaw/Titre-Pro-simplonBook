@@ -7,10 +7,10 @@ const router = express.Router()
 router.post('/add', (req, res) => {
   const newBook = new Book(req.body); // nouvelle instance du modèle Book
 
-  newBook.save((err, book) => {     // on enregistre le Book dans la db
+  newBook.save((err) => {     // on enregistre le Book dans la db
     if (err) res.send(err)
-    res.redirect('http://localhost:3000') // redirection sur la page de l'app (React)
   })
+  res.redirect('http://localhost:3000') // redirection sur la page de l'app (React)
 })
 
 // #GET method
@@ -39,10 +39,10 @@ router.post('/:id/update', (req, res) => {
 
 // #DELETE method
 router.get('/:id/delete', (req, res) => {
-  Book.findByIdAndRemove(req.params.id, (err, book) => {
+  Book.findByIdAndRemove(req.params.id, (err) => {
     if (err) res.send(err)
-    res.redirect('http://localhost:3000/') // on redirige sur la page de l'app (React)
   })
+  res.redirect('http://localhost:3000/') // on redirige sur la page de l'app (React)
 })
 
 module.exports = router;
