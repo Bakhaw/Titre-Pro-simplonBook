@@ -1,8 +1,9 @@
-const express = require('express');
+const express  = require('express');
 const mongoose = require('mongoose');
+const cors     = require('cors');
 
-const config = require('./config/config');
-const router = require('./routes/routes');
+const config   = require('./config/config');
+const router   = require('./routes/routes');
 
 const app = express();
 
@@ -11,6 +12,7 @@ mongoose.connect(config.mongoUrl, () => {
 });
 
 app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 app.use(router);
 
 
