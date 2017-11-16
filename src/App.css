@@ -18,7 +18,7 @@ body {
 }
 
 p {
-  font-family: monospace;
+  font-family: cursive;
   font-size: 17px;
 }
 
@@ -40,7 +40,7 @@ button {
   border: 2px solid goldenrod;
   background-color: #333;
   color: gold;
-  font-family: monospace;
+  font-family: cursive;
 }
 
 button:hover {

@@ -6,8 +6,9 @@ class Bibliotheque extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container-fluid">
         <Form />
+        <h2>VOS LIVRES:</h2>
         <ul className="d-flex flex-wrap">
           {this.props.displayBooks.map((book, index) =>
             <li key={index} className="col-md-3 liste-item">
