@@ -33,7 +33,7 @@ router.get('/:id', (req, res) => {
 router.post('/:id/update', (req, res) => {
   Book.findByIdAndUpdate(req.params.id, req.body, (err, prevBook) => { // on utilise la méthode .findByIdAndUpdate() de mongoose
     if (err) res.send(err)
-    res.json({message: `${prevBook.titre} à bien été modifié`})
+    res.redirect("http://localhost:3000")
   })
 })
 
