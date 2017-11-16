@@ -22,8 +22,17 @@ componentDidMount() {
 
   render() {
     return (
-      <div>
-        <Bibliotheque displayBooks={this.state.books}/>
+      <div className="container-fluid">
+        {/* accueil */}
+        <div className="header text-center">
+          <h1>BIEVENUE DANS NOTRE BIBLIOTHEQUE</h1>
+          <h3>Ajoutez vos livres dans la bibliothèque et venez les consulter quand
+            vous le voulez !</h3>
+        </div>
+        {/* livres */}
+        <div className="livres">
+          <Bibliotheque displayBooks={this.state.books}/>
+        </div>
       </div>
     );
   }

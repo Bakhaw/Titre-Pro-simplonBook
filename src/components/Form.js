@@ -4,7 +4,7 @@ class Form extends Component {
 
   render() {
     return (
-      <div>
+      <div className="form">
         <form action="http://localhost:3005/add" method="POST">
           <input name = "titre" placeholder="titre"/>
           <input name = "auteur" placeholder="auteur"/>

@@ -8,15 +8,15 @@ class Bibliotheque extends Component {
     return (
       <div>
         <Form />
-        <ul>
+        <ul className="d-flex flex-wrap">
           {this.props.displayBooks.map((book, index) =>
-            <li key={index}>
-            <p>Titre: {book.titre}</p>
-            <p>Auteur: {book.auteur}</p>
-            <p>Année de publication: {book.annee_de_publication}</p>
-            <p>Nombre de pages: {book.pages}</p>
-            <p>Date de création: {book.date_de_creation}</p>
-            <DeleteButton id={book._id}/>
+            <li key={index} className="col-md-3 liste-item">
+              <p><span className="infos">Titre:</span> {book.titre}</p>
+              <p><span className="infos">Auteur:</span> {book.auteur}</p>
+              <p><span className="infos">Année de publication:</span> {book.annee_de_publication}</p>
+              <p><span className="infos">Nombre de pages:</span> {book.pages}</p>
+              <p><span className="infos">Date de création:</span> {book.date_de_creation}</p>
+              <DeleteButton id={book._id}/>
           </li>
           )}
         </ul>

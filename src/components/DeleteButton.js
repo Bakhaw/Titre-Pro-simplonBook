@@ -6,7 +6,7 @@ class DeleteButton extends Component {
     return (
       <div>
         <form action={`http://localhost:3005/${this.props.id}/delete`} method="GET">
-          <button type="submit">X</button>
+          <button type="submit">Supprimer</button>
         </form>
       </div>
     );
