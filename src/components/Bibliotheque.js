@@ -32,7 +32,7 @@ class Bibliotheque extends Component {
               <p><span className="infos">Date de création:</span> {book.date_de_creation}</p>
               <button type="submit" className="btn btn-light btn-sm" onClick={() => this.handleDisplay()}>Modifier</button>
               <div style={displayer}>
-                <EditForm id={book._id}/>
+                <EditForm id={book._id} titre={book.titre} auteur={book.auteur} annee={book.annee_de_publication} pages={book.pages} date={book.date_de_creation}/>
               </div>
               <DeleteButton id={book._id}/>
           </li>
